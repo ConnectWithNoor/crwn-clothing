@@ -10,8 +10,10 @@
     display: flex;
     justify-content: space-between;
   }
+}
 
-  .error {
-    color: rgba(34, 36, 36, 0.067);
-  }
+.error {
+  margin-bottom: 10px;
+  font-weight: 800;
+  color: black;
 }
