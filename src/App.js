@@ -4,9 +4,10 @@ import { useDispatch } from 'react-redux';
 import Homepage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import Header from './components/header/header.component';
-import SignInAndSignUp from './pages/signin-and-signup/signin-and-signup.compoent';
 import { auth, createUserProfileDocument } from './firebase/fireabase.utils';
 import { setCurrentUser } from './redux/user/user.action';
+import AuthRedirect from './components/auth-redirect/auth-redirect.render';
+import SignInAndSignUpPage from './pages/signin-and-signup/signin-and-signup.compoent';
 
 import './App.css';
 
@@ -45,9 +46,9 @@ function App() {
         <Route path='/shop'>
           <ShopPage />
         </Route>
-        <Route path='/signin'>
-          <SignInAndSignUp />
-        </Route>
+        <AuthRedirect path='/signin'>
+          <SignInAndSignUpPage />
+        </AuthRedirect>
       </Switch>
     </>
   );
