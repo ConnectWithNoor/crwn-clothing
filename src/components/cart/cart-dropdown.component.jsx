@@ -3,11 +3,12 @@ import { useSelector } from 'react-redux';
 
 import CustomButton from '../custom-button/custom-button.component';
 import CartItem from '../cart-item/cart-item.component';
+import { selectCartItem } from '../../redux/cart/cart.selectors';
 
 import './cart-dropdown.styles.scss';
 
 const CartDropdown = () => {
-  const { cartItems } = useSelector((state) => state.cart);
+  const cartItems = useSelector((state) => selectCartItem(state));
   return (
     <div className='cart-dropdown'>
       <div className='cart-items'>
@@ -20,4 +21,4 @@ const CartDropdown = () => {
   );
 };
 
-export default CartDropdown;
+export default React.memo(CartDropdown);
