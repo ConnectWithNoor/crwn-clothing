@@ -24,7 +24,6 @@ const CheckoutItem = ({ cartItem }) => {
         </span>
         <span className='value'>{quantity}</span>
         <span className='arrow' onClick={() => dispatch(addItem(cartItem))}>
-          {' '}
           &#10095;
         </span>
       </span>

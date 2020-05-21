@@ -9,7 +9,6 @@ import './cart-icon.styles.scss';
 const CartIcon = () => {
   const dispatch = useDispatch();
   const itemCount = useSelector((state) => {
-    console.log('123');
     return selectCartItemCount(state);
   });
 
